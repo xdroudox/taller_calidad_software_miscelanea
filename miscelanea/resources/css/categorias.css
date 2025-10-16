@@ -1,0 +1,496 @@
+/* Reset */
+.categorias-container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor general  */
+.categorias-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color:  #111827;  
+    padding: 2rem 1rem;
+}
+
+/* Card principal - FONDO BLANCO */
+.categorias-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.75rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Alerts */
+.cat-alert {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.cat-alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.cat-alert.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.cat-alert button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-alert button:hover {
+    opacity: 1;
+}
+
+/* Botones */
+.cat-btn {
+    padding: 0.45rem 0.9rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.cat-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cat-btn:active {
+    transform: translateY(0);
+}
+
+/* Colores Bootstrap planos */
+.cat-btn.primary { 
+    background-color: #007bff; 
+    color: white; 
+}
+.cat-btn.primary:hover { 
+    background-color: #0056b3; 
+}
+
+.cat-btn.warning { 
+    background-color: #ffc107; 
+    color: #212529; 
+}
+.cat-btn.warning:hover { 
+    background-color: #e0a800; 
+}
+
+.cat-btn.danger { 
+    background-color: #dc3545; 
+    color: white; 
+}
+.cat-btn.danger:hover { 
+    background-color: #c82333; 
+}
+
+.cat-btn.secondary { 
+    background-color: #6c757d; 
+    color: white; 
+}
+.cat-btn.secondary:hover { 
+    background-color: #5a6268; 
+}
+
+.cat-btn.sm {
+    padding: 0.3rem 0.65rem;
+    font-size: 0.8rem;
+}
+
+/* Tabla con scroll */
+.cat-table-wrapper {
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Scroll personalizado */
+.cat-table-wrapper::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.cat-table-wrapper::-webkit-scrollbar-track {
+    background: #f8f9fa;
+}
+
+.cat-table-wrapper::-webkit-scrollbar-thumb {
+    background: #ced4da;
+    border-radius: 5px;
+}
+
+.cat-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #adb5bd;
+}
+
+/* Tabla */
+.cat-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.cat-table thead {
+    background-color: #343a40;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.cat-table th {
+    padding: 0.7rem 0.85rem;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+    white-space: nowrap;
+}
+
+.cat-table td {
+    padding: 0.55rem 0.85rem;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.85rem;
+    color: #212529;
+    vertical-align: middle;
+}
+
+.cat-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.cat-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.cat-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Columna de acciones - botones horizontales */
+.cat-table td:last-child {
+    white-space: nowrap;
+}
+
+.cat-table .cat-btn {
+    margin-right: 0.4rem;
+    display: inline-block;
+}
+
+.cat-table .cat-btn:last-child {
+    margin-right: 0;
+}
+
+/* Badges */
+.cat-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #17a2b8;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* MODAL - MÁS PEQUEÑO Y CON SCROLL */
+.cat-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.cat-modal.show {
+    display: flex;
+}
+
+.cat-modal-dialog {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    position: relative;
+}
+
+.cat-modal-header {
+    padding: 1rem 1.25rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.cat-modal-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.cat-modal-close {
+    background: #dc3545;
+    border: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.cat-modal-close:hover {
+    background: #c82333;
+}
+
+.cat-modal-body {
+    padding: 1.25rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Scroll personalizado para modal */
+.cat-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cat-modal-body::-webkit-scrollbar-track {
+    background: #f8f9fa;
+}
+
+.cat-modal-body::-webkit-scrollbar-thumb {
+    background: #ced4da;
+    border-radius: 4px;
+}
+
+.cat-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #adb5bd;
+}
+
+.cat-modal-footer {
+    padding: 0.875rem 1.25rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.65rem;
+    flex-shrink: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Formularios más compactos */
+.cat-form-group {
+    margin-bottom: 0.875rem;
+}
+
+.cat-label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.85rem;
+}
+
+.cat-input,
+.cat-textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cat-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.cat-input:focus,
+.cat-textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .categorias-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .categorias-card {
+        padding: 1rem;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .cat-table-wrapper {
+        max-height: 380px;
+    }
+
+    .cat-table th,
+    .cat-table td {
+        padding: 0.45rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .cat-btn.sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .cat-modal {
+        padding: 0.5rem;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .cat-modal-dialog {
+        max-width: 90%;
+        max-height: 92vh;
+        width: 90%;
+    }
+
+    .cat-modal-body {
+        padding: 1rem;
+    }
+
+    .cat-modal-header,
+    .cat-modal-footer {
+        padding: 0.75rem 1rem;
+    }
+
+    .cat-form-group {
+        margin-bottom: 0.7rem;
+    }
+
+    .cat-input,
+    .cat-textarea {
+        font-size: 16px; /* Evita zoom en iOS */
+    }
+
+    .cat-label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .categorias-container {
+        padding: 0.75rem 0.25rem;
+    }
+
+    .categorias-card {
+        padding: 0.875rem;
+    }
+
+    .cat-table th,
+    .cat-table td {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .cat-btn {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.75rem;
+    }
+
+    .cat-btn.sm {
+        padding: 0.25rem 0.45rem;
+        font-size: 0.7rem;
+    }
+
+    .cat-modal {
+        padding: 0.25rem;
+        padding-top: 1rem;
+    }
+
+    .cat-modal-dialog {
+        max-width: 95%;
+        width: 95%;
+        max-height: 94vh;
+    }
+
+    .cat-modal-header {
+        padding: 0.65rem 0.875rem;
+    }
+
+    .cat-modal-body {
+        padding: 0.875rem;
+    }
+
+    .cat-modal-footer {
+        padding: 0.65rem 0.875rem;
+    }
+
+    .cat-modal-title {
+        font-size: 1rem;
+    }
+
+    .cat-form-group {
+        margin-bottom: 0.65rem;
+    }
+
+    .cat-input,
+    .cat-textarea {
+        padding: 0.5rem 0.65rem;
+        font-size: 16px;
+    }
+}
