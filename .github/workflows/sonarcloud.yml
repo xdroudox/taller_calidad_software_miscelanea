@@ -12,6 +12,7 @@ jobs:
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,7 +25,11 @@ jobs:
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
+        with:
+          projectBaseDir: .
+          args: >
+            -Dsonar.projectKey=xdroudox_taller_calidad_software_miscelanea
+            -Dsonar.organization=xdroudox
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
