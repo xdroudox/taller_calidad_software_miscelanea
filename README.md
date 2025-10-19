@@ -1,7 +1,6 @@
 # taller_calidad_software_miscelanea
-# Sistema Gestor de Miscelánea
 
-Este proyecto es una aplicación web desarrollada con Laravel que permite la gestión integral de una miscelánea, incluyendo autenticación de usuarios, control de productos, categorías y administración del inventario desde un panel centralizado (Dashboard). El sistema está diseñado para facilitar las operaciones diarias de una tienda de barrio o miscelánea, optimizando los procesos de registro, consulta y mantenimiento de información comercial.
+Este proyecto es una aplicación web desarrollada con Laravel que permite la gestión integral de una miscelánea, incluyendo autenticación de usuarios, control de productos, categorías y Dashboard. El sistema está diseñado para facilitar las operaciones diarias de una miscelánea, optimizando los procesos de registro, consulta y mantenimiento de información comercial.
 
 ## Tecnologías Utilizadas
 
